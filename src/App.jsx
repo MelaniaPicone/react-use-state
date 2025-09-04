@@ -38,7 +38,7 @@ const languages = [
 function App() {
 
   // variabile di stato
-  const [language, setLanguace] = useState(languages[0]);
+  const [language, setLanguage] = useState(languages[0]);
 
 
   return (
@@ -48,7 +48,9 @@ function App() {
   {}
 {languages.map((language) =>
 { return (
-  <button className="btn btn-primary me-2">{language.title}</button>
+  <button className="btn btn-primary me-2" onClick ={() => setLanguage(language)}> 
+  
+  {language.title}</button>
 )}
 
 )}
@@ -58,8 +60,8 @@ function App() {
 
 {}
 <div className="col-12 mt-4"><div className="card p-3">
-  <h2>bla</h2>
-  <p>blablabla</p>
+  <h2>{language.title}</h2>
+  <p>{language.description}</p>
 </div>
 </div>
 
