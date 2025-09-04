@@ -1,3 +1,6 @@
+import { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const languages = [
   {
     id: 1,
@@ -33,19 +36,36 @@ const languages = [
 
 
 function App() {
+
+  // variabile di stato
+  const [language, setLanguace] = useState(languages[0]);
+
+
   return (
   <div className="container my-5">
 <div className="row">
-<div className="col-2">
+<div className="col-12">
+  {}
 {languages.map((language) =>
 { return (
-  <button className="btn btn-primary">{language.title}</button>
+  <button className="btn btn-primary me-2">{language.title}</button>
 )}
 
 )}
 
 
 </div>
+
+{}
+<div className="col-12 mt-4"><div className="card p-3">
+  <h2>bla</h2>
+  <p>blablabla</p>
+</div>
+</div>
+
+
+
+
 </div>
 
 </div>)
